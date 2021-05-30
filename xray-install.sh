@@ -13,10 +13,10 @@ chmod +x /usr/local/bin/xray/xray
 #wget --no-check-certificate -O "Xray-ws-main.tar.gz" https://github.com/bejiba/Xray-ws/archive/refs/heads/main.zip
 #unzip "Xray-ws-main.tar.gz"
 
-#½«µ±Ç°root/Xray-ws-mainÄ¿Â¼ÏÂµÄËùÓĞÎÄ¼ş¿½±´µ½/usr/local/bin/xray
+# å°†å½“å‰root/Xray-ws-mainç›®å½•ä¸‹çš„æ‰€æœ‰æ–‡ä»¶æ‹·è´åˆ°/usr/local/bin/xray
 cp -r Xray-ws-main/* /usr/local/bin/xray
 
-#É¾³ıXray-ws-main.tar.gzÒÔ¼°½âÑ¹ºóµÄÎÄ¼şXray-ws-main
+#åˆ é™¤Xray-ws-main.tar.gzä»¥åŠè§£å‹åçš„æ–‡ä»¶Xray-ws-main
 #rm -rf Xray-ws-main Xray-ws-main.tar.gz
 
 # Xray Installation
@@ -127,15 +127,15 @@ cat <<EOF > /usr/local/bin/xray/conf/config.json
           "tag": "IPv4-out"
         },
         {"tag": "VPS1",
-        	"protocol": "vmess",        // ³ö¿ÚĞ­Òé
+        	"protocol": "vmess",        // å‡ºå£åè®®
       "settings": {
         "vnext": [
           {
-            "address": "158.101.92.101", // ¹úÍâ·şÎñÆ÷µØÖ·
-            "port": 80,        // ¹úÍâ·şÎñÆ÷¶Ë¿Ú
+            "address": "158.101.92.101", // å›½å¤–æœåŠ¡å™¨åœ°å€
+            "port": 80,        // å›½å¤–æœåŠ¡å™¨ç«¯å£
             "users": [
                 {"id": "3583bea4-628e-492c-b19c-6fb34f149757",
-                 "alterId": 0  } // ÓÃ»§ ID£¬ĞëÓë¹úÍâ·şÎñÆ÷¶ËÅäÖÃÏàÍ¬
+                 "alterId": 0  } // ç”¨æˆ· IDï¼Œé¡»ä¸å›½å¤–æœåŠ¡å™¨ç«¯é…ç½®ç›¸åŒ
             ]
           }
         ]
@@ -155,7 +155,7 @@ cat <<EOF > /usr/local/bin/xray/conf/config.json
                           "localhost"
   ]
 },
-"routing": { // Â·ÓÉÉèÖÃ
+"routing": { // è·¯ç”±è®¾ç½®
     "rules": [
       {"type": "field",
         "outboundTag": "VPS1",
@@ -165,7 +165,7 @@ cat <<EOF > /usr/local/bin/xray/conf/config.json
         "geosite:apple-cn",
         "geosite:netflix",
         "geosite:telegram"         
-       ] // netflix ×ß VPS1
+       ] // netflix èµ° VPS1
       },
 {
       "type": "field",
