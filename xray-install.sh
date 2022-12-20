@@ -131,7 +131,7 @@ cat <<EOF > /usr/local/bin/xray/conf/config.json
       "settings": {
         "vnext": [
           {
-            "address": "158.101.92.101", // 国外服务器地址
+            "address": "******", // 国外服务器地址
             "port": 80,        // 国外服务器端口
             "users": [
                 {"id": "3583bea4-628e-492c-b19c-6fb34f149757",
