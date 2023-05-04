@@ -1,9 +1,15 @@
 #!/usr/bin/env bash
+echo -e "提示：使用本脚本请使用root权限！"
+echo -e "开始安装xray"
+
+
 mkdirTools() {
 	mkdir -p /usr/local/bin/xray
 	mkdir -p /usr/local/bin/xray/conf
 	mkdir -p /usr/local/bin/xray/log
 }
+
+mkdirTools
 
 wget -O /usr/local/bin/xray/xray https://github.com/bejiba/Xray-ws/raw/main/xray
 wget -O /usr/local/bin/xray/geosite.dat https://github.com/bejiba/Xray-ws/raw/main/geosite.dat
@@ -213,6 +219,8 @@ cat <<EOF > /usr/local/bin/xray/conf/config.json
 
 EOF
 
+echo -e "默认路径：/usr/local/bin/xray"
+echo -e "重启xray指令：systemctl restart xray"
 systemctl restart xray
-
+echo -e "查看xray状态：systemctl status xray"
 systemctl status xray
